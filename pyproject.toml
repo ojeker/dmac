@@ -1,0 +1,21 @@
+[project]
+name = "dmac"
+version = "0.1.0"
+description = "Degree-minute accounting with a Home Assistant adapter"
+requires-python = ">=3.14.2"
+dependencies = [
+    "homeassistant==2026.11.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.24",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+addopts = ["--import-mode=importlib"]
